@@ -1,0 +1,17 @@
+#main {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 700px;
+}
+
+.mainContainer {
+  margin-top: 15px;
+  background-color: bisque;
+  padding: 10px 50px 50px 50px;
+  border-radius: 5px;
+}

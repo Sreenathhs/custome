@@ -1,0 +1,30 @@
+<div id="main">
+  <div class="mainContainer">
+    <div>
+      <h1>Login</h1>
+    </div>
+    <div class="form-fields">
+      <form #loginForm="ngForm" (ngSubmit)="checkUserCredential(loginForm)">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email"  placeholder="Enter email" name="email" #email="ngModel" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ngModel required>
+          <div *ngIf="email.errors && email.touched">
+            <div class="alert alert-danger" role="alert">
+              Email-ID is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off" #password="ngModel" name="password" ngModel required>
+          <div *ngIf="password.errors && password.touched">
+            <div class="alert alert-danger" role="alert">
+              Password is required
+            </div>
+          </div>
+        </div>
+        <button mat-raised-button color="accent" [disabled]="!loginForm.valid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
